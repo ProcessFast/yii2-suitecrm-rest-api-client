@@ -6,16 +6,16 @@ This extension provides the AWS SDK 3 integration for the Yii2 framework
 
 Contents
 --------
-1. About
-2. Installation
-3. Yii2 Configuration
-4. Usage Example
-5. Notes
-6. get_note_attachment() Example
-7. set_note_attachment() Example
+1.About
+2.Installation
+3.Yii2 Configuration
+4.Usage Example
+5.Notes
+6.get_note_attachment() Example
+7.set_note_attachment() Example
 
-1. About
---------
+1.About
+-------
 - PHP wrapper class for interacting with a SugarCRM REST API
 - Creating, reading, and updating capability
 - More info on SuiteCRM: https://suitecrm.com/
@@ -24,8 +24,8 @@ Contents
 - Designed to work with SuiteCRM / SugarCRM v.6
 
 
-2. Installation
----------------
+2.Installation
+--------------
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
@@ -44,8 +44,8 @@ or add
 to the require section of your `composer.json` file.
 
 
-3. Yii2 Configuration
----------------------
+3.Yii2 Configuration
+--------------------
 
 
 To use this extension, simply add the following code in your application configuration:
@@ -65,8 +65,8 @@ return [
 ];
 ```
 
-4. Usage Example
-----------------
+4.Usage Example
+---------------
 
 Example Snippet:
 
@@ -87,15 +87,15 @@ Example Snippet:
     $suiteCrm->print_results($results);
 ```
 
-5. Notes
---------
+5.Notes
+-------
 - The `is_valid_id()` function may need to modify for different versions
 of SugarCRM.
 - Different versions of SugarCRM have different ID formats.
 
 
-6. get_note_attachment() Example
---------------------------------
+6.get_note_attachment() Example
+-------------------------------
 >This example outputs the contents of a note's attachment, given the
 >note ID. Assumes $note_id contains the ID of the note you wish to modify.
 
@@ -117,8 +117,8 @@ of SugarCRM.
 	exit;
 
 
-6. set_note_attachment() Example
---------------------------------
+6.set_note_attachment() Example
+-------------------------------
 >This example illustrates how to set a note's attachment from an html form.
 >Assumes $note_id contains the ID of the note you wish to modify.
 
@@ -143,8 +143,8 @@ of SugarCRM.
 		$file_results = $sugar->set_note_attachment($note_id,$binary,$filename);
 	}
 
-7. get_available_modules() Example
-----------------------------------
+7.get_available_modules() Example
+---------------------------------
 >This example illustrates how to get the available modules in SuiteCRM/SugarCRM.  All of them.
 >This is a handy function to use when building future proof SuiteCRM/SugarCRM plugins.
 >
