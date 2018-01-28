@@ -1,9 +1,10 @@
 <?php
 /**
- * @copyright ProcessFast, LLC
- * @author Brad Stancel <brad@processfast.com>
- * @license http://opensource.org/licenses/mit-license.php The MIT License (MIT)
  * @package yii2-suitecrm-rest-api-client
+ * @author  Brad Stancel
+ * @link    https://github.com/ProcessFast/yii2-suitecrm-rest-api-client
+ * @license MIT
+ * @copyright (c) 2018, ProcessFast, LLC
  */
 
 namespace processfast\suitecrm;
