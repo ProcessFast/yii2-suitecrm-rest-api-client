@@ -11,9 +11,9 @@
     },
     "authors": [
         {
-            "name": "Brad Stancel",
             "name": "Asa Kusuma",
-            "name": "Alex Plekhanov"
+            "name": "Alex Plekhanov",
+            "name": "Brad Stancel"
         }
     ],
     "require": {
