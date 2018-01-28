@@ -6,13 +6,13 @@ This extension provides the AWS SDK 3 integration for the Yii2 framework
 
 Contents
 --------
-1.About
-2.Installation
-3.Yii2 Configuration
-4.Usage Example
-5.Notes
-6.get_note_attachment() Example
-7.set_note_attachment() Example
+1. About
+2. Installation
+3. Yii2 Configuration
+4. Usage Example
+5. Notes
+6. get_note_attachment() Example
+7. set_note_attachment() Example
 
 1.About
 -------
