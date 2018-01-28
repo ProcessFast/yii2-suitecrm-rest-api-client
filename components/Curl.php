@@ -13,7 +13,6 @@ namespace processfast\Alexsoft;
  * @method string delete
  *
  * @package Curl
- * @author  Alex Plekhanov
  * @link    https://github.com/alexsoft/curl
  * @license MIT
  * @version 0.4.0-dev
