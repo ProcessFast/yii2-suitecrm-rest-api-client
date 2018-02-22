@@ -1,8 +1,8 @@
 <?php
 
-namespace Asakusuma\SugarWrapper;
+namespace processfast\suitecrm\components;
 
-use processfast\Alexsoft\Curl;
+use processfast\suitecrm\components\Curl;
 // Adding these in for later when switching to Yii2's HttpClient
 use yii\httpclient\Client;
 use yii\httpclient\CurlTransport;
@@ -532,28 +532,29 @@ class Rest
     public function print_results($results)
     {
         if (isset($results['entry_list'][0]['module_name'])) {
-            $module_name = $results['entry_list'][0]['module_name'];
+            $module_name = @$results['entry_list'][0]['module_name'];
 
             echo "<h1>" . $module_name . "</h1>";
 
-            foreach ($results['entry_list'] as $i => $entry) {
+            foreach (@$results['entry_list'] as $i => $entry) {
                 echo "<div class='first'>";
 
-                foreach ($entry['name_value_list'] as $field) {
-                    echo "<div class='second'>" . $field['name'] . " = " . $field['value'] . "</div>";
+                foreach (@$entry['name_value_list'] as $field) {
+                    echo "<div class='second'>" . @$field['name'] . " = " . @$field['value'] . "</div>";
                 }
 
                 if (isset($results['relationship_list'][$i])) {
-                    foreach ($results['relationship_list'][$i] as $module) {
-                        echo "<div class='second'><b>related " . $module['name'] . "</b><br/>";
+                    foreach (@$results['relationship_list'][$i] as $module) {
+                        echo "<div class='second'><b>related " . @$module['name'] . "</b><br/>";
+                        if( isset($module['records']) ){
+                            foreach (@$module['records'] as $x => $record) {
+                                echo "<div class='third'>";
 
-                        foreach ($module['records'] as $x => $record) {
-                            echo "<div class='third'>";
-
-                            foreach ($record as $field) {
-                                echo "<div class='fourth'>" . $field['name'] . " = " . $field['value'] . "</div>";
+                                foreach ($record as $field) {
+                                    echo "<div class='fourth'>" . @$field['name'] . " = " . @$field['value'] . "</div>";
+                                }
+                                echo "</div>";
                             }
-                            echo "</div>";
                         }
                         echo "</div>";
                     }

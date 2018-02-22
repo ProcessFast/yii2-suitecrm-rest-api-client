@@ -1,6 +1,6 @@
 <?php
 
-namespace processfast\Alexsoft;
+namespace processfast\suitecrm\components;
 
 /**
  * Neat and tidy cURL wrapper for PHP

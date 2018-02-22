@@ -7,11 +7,11 @@
  * @copyright (c) 2018, ProcessFast, LLC
  */
 
-namespace processfast\suitecrm;
+namespace processfast\suitecrm\components;
 
 use Yii;
 use yii\base\Component;
-use Asakusuma\SugarWrapper\Rest;
+use processfast\suitecrm\components\Rest;
 
 /**
  * SuiteCRM / SugarCRM 6.x REST API Wrapper class available as a Yii2 extension.
@@ -36,9 +36,9 @@ class SuiteCrmRestApi extends Component {
     public $password = null;
     
     /**
-     * An instance of a Asakusuma\SugarWrapper\Rest.
+     * An instance of a Rest.
      *
-     * @var Asakusuma\SugarWrapper\Rest
+     * @var Rest
      */
     private $sugarWrapperRest;
     
@@ -50,16 +50,29 @@ class SuiteCrmRestApi extends Component {
      * @return Asakusuma\SugarWrapper\Rest SugarCRM Rest API class
      */
     public function __construct() {
-        
-        $this->sugarWrapperRest = new Asakusuma\SugarWrapper\Rest;
+        $this->sugarWrapperRest = new Rest();
         $this->sugarWrapperRest = $this->sugarWrapperRest->setUrl($this->rest_url);
         $this->sugarWrapperRest = $this->sugarWrapperRest->setUsername($this->username);
         $this->sugarWrapperRest = $this->sugarWrapperRest->setPassword($this->password);
-           
+
         return $this->sugarWrapperRest;
     }
-    
-    
+
+    /**
+     * @return \processfast\suitecrm\components\Rest
+     */
+    public function getSugarWrapperRest(){
+        return $this->sugarWrapperRest;
+    }
+
+    /**
+     * @return \processfast\suitecrm\components\Rest
+     */
+    public function setSugarWrapperRest(){
+        $this->sugarWrapperRest = $this->sugarWrapperRest->setUrl($this->rest_url);
+        $this->sugarWrapperRest = $this->sugarWrapperRest->setUsername($this->username);
+        $this->sugarWrapperRest = $this->sugarWrapperRest->setPassword($this->password);
+    }
 
     
 
